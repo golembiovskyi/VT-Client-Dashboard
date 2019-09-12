@@ -12,4 +12,26 @@ module.exports = {
         // Required scope for the client-side viewer
         public: ['viewables:read']
     }
+  
+  //some endpoints have not been packaged with Forge SDK
+  //most endpoints of Issue API use the same kind of header
+  
+  //  hqv1:{
+   //   userprofile_useratme: 'https://developer.api.autodesk.com/userprofile/v1/users/@me'
+   // },
+
+   // Issue API
+  // issue: {
+
+    //    basedUrl: 'https://developer.api.autodesk.com/issues/v1/containers/',
+    //  httpHeaders: function (access_token) {
+    //    return {
+    //      Authorization: 'Bearer ' + access_token,
+    //      'Content-Type': 'application/vnd.api+json'
+    //    }
+    //  },
+    //  getIssues: function (containerId, filter = '') {
+    //    return this.basedUrl + containerId + '/quality-issues' + filter;
+    //  }
+   // },
 };
