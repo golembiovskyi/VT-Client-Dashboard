@@ -27,9 +27,8 @@ class Dashboard {
         // this function may vary for layout to layout...
         // for learn forge tutorials, let's get the ROW and adjust the size of the 
         // columns so it can fit the new dashboard column, also we added a smooth transition css class for a better user experience
-        var row = $(".row").children();
-        $(row[0]).removeClass('col-sm-4').addClass('col-sm-2 transition-width');
-        $(row[1]).removeClass('col-sm-8').addClass('col-sm-7 transition-width').after('<div class="col-sm-3 transition-width" id="dashboard"></div>');
+        //var row = $(".row").children();
+        //$(row[2]).removeClass('col-sm-8').addClass('col-sm-8 transition-width').after('<div class="col-xs-6 col-sm 3 transition" id="dashboard"></div>');
     }
 
     loadPanels = function () {
@@ -59,7 +58,7 @@ class DashboardPanelChart extends DashboardPanel {
     load(parentDivId, divId, viewer, modelData) {
         super.load(parentDivId, divId, viewer);
         this.canvasId = divId + 'Canvas';
-        $('#' + divId).append('<canvas id="' + this.canvasId + '" width="400" height="400"></canvas>');
+        $('#' + divId).append('<canvas id="' + this.canvasId + '" width="200" height="200"></canvas>');
         this.modelData = modelData;
     }
     generateColors(count) {
