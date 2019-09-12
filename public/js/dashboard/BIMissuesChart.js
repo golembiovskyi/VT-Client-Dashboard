@@ -23,5 +23,5 @@ var jsonParser = bodyParser.json();
         
     });
   
-});
+};
 
