@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>BIM360 Dashboard</title>
   <meta charset="utf-8" />
@@ -39,67 +40,76 @@
 
 <body>
   <!-- Stacked navbar by Bootstrap: https://getbootstrap.com/examples/navbar-fixed-top/ -->
-</nav class="navbar navbar-inverse navbar fixed-top">
+  </nav class="navbar navbar-inverse navbar fixed-top">
   <div class="container-fluid">
-      <li>
-          <a href="https://www.viatechnik.com/" target="_blank">
-            <img alt="VIATechnik" src="https://www.viatechnik.com/wp-content/themes/viatechnik/assets/images/logo.png"
-              height="15">
-          </a>
-        </li>
+    <li>
+      <a href="https://www.viatechnik.com/" target="_blank">
+        <img alt="VIATechnik" src="https://www.viatechnik.com/wp-content/themes/viatechnik/assets/images/logo.png"
+          height="15">
+      </a>
+    </li>
   </div>
-</nav>
+  </nav>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-3 col-md-2 sidebar">
+      <div class="col-sm-3 sidebar">
         <ul class="nav nav-sidebar">
-        <li role="presentation" class="active"><a href="#">Dashboard</a></li>
-        <li role="presentation"><a href="#">Home</a></li>
-        <li role="presentation"><a href="https://viatechnik.app.box.com/embed/s/ajai1bs2ihltvu1ud9lbioh1ghe4mu54?sortColumn=date&view=list">Equipment Specs</a></li>
-        <li role="presentation"><a href="https://viatechnik.app.box.com/embed/s/km431zoim893nmr6tpoen3ghng9suw2h?sortColumn=date&view=list">Equipment Cuts</a></li>
-        <li role="presentation"><a href="https://viatechnik.app.box.com/embed/s/mo9mh78xzaxf38swqylmzquv7ywc1ayy?sortColumn=date&view=list">Coordination Drawings</a></li>
-        <li role="presentation"><a href="https://viatechnik.app.box.com/embed/s/fwhwc7qbnpgrwpf4u2p48njlupyk6myt?sortColumn=date&view=list">BIM Execution Plan</a></li>
-        <li role="presentation"><a href="#">Settings</a></li>
-        <li role="presentation"><a href="#">Help Center</a></li>
-        <ul class="nav nav-sidebar">
-          <div class="panel panel-default fill">
-            <div class="panel-heading" data-toggle="tooltip" style="padding: 0px;">
-              <span id="userInfo"></span>
-              <span id="refreshHubs" class="glyphicon glyphicon-refresh" style="cursor: pointer; display: none"
-                title="Refresh list of files"></span>
-              <span id="signOut" class="glyphicon glyphicon-log-out"
-                style="margin-top:5px;cursor: pointer; float: right; display: none" title="Sign out"> </span>
-            </div>
-            <div id="userHubs">
-              <div style="padding-top: 0px; text-align: center;">
-                <button class="btn btn-lg btn-default" id="autodeskSigninButton">
-                  <img src="https://github.com/Autodesk-Forge/learn.forge.viewhubmodels/raw/master/img/autodesk_text.png"
-                    height="0"> Sign in
-                </button>
-                <a href="https://forge.autodesk.com/blog/bim-360-docs-provisioning-forge-apps">Learn more</a>.
+          <li role="presentation" class="active"><a href="#">Dashboard</a></li>
+          <li role="presentation"><a href="#">Home</a></li>
+          <li role="presentation"><a
+              href="https://viatechnik.app.box.com/embed/s/ajai1bs2ihltvu1ud9lbioh1ghe4mu54?sortColumn=date&view=list">Equipment
+              Specs</a></li>
+          <li role="presentation"><a
+              href="https://viatechnik.app.box.com/embed/s/km431zoim893nmr6tpoen3ghng9suw2h?sortColumn=date&view=list">Equipment
+              Cuts</a></li>
+          <li role="presentation"><a
+              href="https://viatechnik.app.box.com/embed/s/mo9mh78xzaxf38swqylmzquv7ywc1ayy?sortColumn=date&view=list">Coordination
+              Drawings</a></li>
+          <li role="presentation"><a
+              href="https://viatechnik.app.box.com/embed/s/fwhwc7qbnpgrwpf4u2p48njlupyk6myt?sortColumn=date&view=list">BIM
+              Execution Plan</a></li>
+          <li role="presentation"><a href="#">Settings</a></li>
+          <li role="presentation"><a href="#">Help Center</a></li>
+          <ul class="nav nav-sidebar">
+            <div class="panel panel-default fill">
+              <div class="panel-heading" data-toggle="tooltip" style="padding: 0px;">
+                <span id="userInfo"></span>
+                <span id="refreshHubs" class="glyphicon glyphicon-refresh" style="cursor: pointer; display: none"
+                  title="Refresh list of files"></span>
+                <span id="signOut" class="glyphicon glyphicon-log-out"
+                  style="margin-top:5px;cursor: pointer; float: right; display: none" title="Sign out"> </span>
+              </div>
+              <div id="userHubs">
+                <div style="padding-top: 0px; text-align: center;">
+                  <button class="btn btn-lg btn-default" id="autodeskSigninButton">
+                    <img
+                      src="https://github.com/Autodesk-Forge/learn.forge.viewhubmodels/raw/master/img/autodesk_text.png"
+                      height="0"> Sign in
+                  </button>
+                  <a href="https://forge.autodesk.com/blog/bim-360-docs-provisioning-forge-apps">Learn more</a>.
+                </div>
               </div>
             </div>
-          </div>
+          </ul>
         </ul>
-      </ul>
-    </div>
+      </div>
       <div class="col-sm-2" id="widgets">
         <img src="https://www.air-rite.com/media/logo.png" alt="..." class="img-thumbnail">
-        <h6><h6>
-        <img src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/191:100/pass/GoogleMapTA.jpg" alt="..." class="img-thumbnail">
-        <h6>1323 Morse Ave. Chicago, IL 60626 </h6>
-        <img src="http://www.xconomy.com/wordpress/wp-content/images/2014/02/Spring-District-building-rendering.jpg" alt="..." class="img-thumbnail">
-        <h6>Coordination Schedule</h6>
-        <img src="https://apexcharts.com/wp-content/uploads/2018/05/semi-circle-chart.svg" alt="..." class="img-thumbnail">
+        <h6>
+          <h6>
+            <img src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/191:100/pass/GoogleMapTA.jpg" alt="..."
+              class="img-thumbnail">
+            <h6>1323 Morse Ave. Chicago, IL 60626 </h6>
+            <img src="http://www.xconomy.com/wordpress/wp-content/images/2014/02/Spring-District-building-rendering.jpg"
+              alt="..." class="img-thumbnail">
+            <h6>Coordination Schedule</h6>
+            <img src="https://apexcharts.com/wp-content/uploads/2018/05/semi-circle-chart.svg" alt="..."
+              class="img-thumbnail">
 
       </div>
-      <div class="col-sm-8" id="visuals">
-        <div id="forgeViewer"></div>
-        <div id="dashboard"></div>
-      </div>
-
-      <div class="col-sm-4 fill">
-        <!--<script src="js/d3Charts/d3Charts.js"></script>-->
+      <div class="col-sm-7" id="visuals">
+        <div class="short-div" id="forgeViewer"></div>
+        <div  id="dashboard"></div>
       </div>
     </div>
   </div>
