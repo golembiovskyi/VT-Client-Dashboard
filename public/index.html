@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>BIM360 Dashboard</title>
   <meta charset="utf-8" />
@@ -36,34 +35,33 @@
   <script src="js/Dashboard/PanelCategoryChart.js"></script>
   <script src="js/Dashboard/PanelMaterialChart.js"></script>
   <script src="js/Dashboard/PanelClashStatusChart.js"></script>
-
-
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBV72JOytVAAXlvey3kGB-XCu4S5XUxOs"
-    type="text/javascript"></script>
-  <script src="js/MiniMapExtension.js"></script>
-
 </head>
 
 <body>
   <!-- Stacked navbar by Bootstrap: https://getbootstrap.com/examples/navbar-fixed-top/ -->
-  <nav class="navbar navbar-default navbar-left">
-    <div class="container-fixed">
-      <ul class="nav nav-pills nav-stacked">
-        <li>
+</nav class="navbar navbar-inverse navbar fixed-top">
+  <div class="container-fluid">
+      <li>
           <a href="https://www.viatechnik.com/" target="_blank">
             <img alt="VIATechnik" src="https://www.viatechnik.com/wp-content/themes/viatechnik/assets/images/logo.png"
               height="15">
           </a>
         </li>
+  </div>
+</nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 col-md-2 sidebar">
+        <ul class="nav nav-sidebar">
         <li role="presentation" class="active"><a href="#">Dashboard</a></li>
         <li role="presentation"><a href="#">Home</a></li>
-        <li role="presentation"><a href="#">Equipment Specs</a></li>
-        <li role="presentation"><a href="#">Equipment Cuts</a></li>
-        <li role="presentation"><a href="#">Coordination Drawings</a></li>
-        <li role="presentation"><a href="#">RFI Logs</a></li>
+        <li role="presentation"><a href="https://viatechnik.app.box.com/embed/s/ajai1bs2ihltvu1ud9lbioh1ghe4mu54?sortColumn=date&view=list">Equipment Specs</a></li>
+        <li role="presentation"><a href="https://viatechnik.app.box.com/embed/s/km431zoim893nmr6tpoen3ghng9suw2h?sortColumn=date&view=list">Equipment Cuts</a></li>
+        <li role="presentation"><a href="https://viatechnik.app.box.com/embed/s/mo9mh78xzaxf38swqylmzquv7ywc1ayy?sortColumn=date&view=list">Coordination Drawings</a></li>
+        <li role="presentation"><a href="https://viatechnik.app.box.com/embed/s/fwhwc7qbnpgrwpf4u2p48njlupyk6myt?sortColumn=date&view=list">BIM Execution Plan</a></li>
         <li role="presentation"><a href="#">Settings</a></li>
         <li role="presentation"><a href="#">Help Center</a></li>
-        <div class="col">
+        <ul class="nav nav-sidebar">
           <div class="panel panel-default fill">
             <div class="panel-heading" data-toggle="tooltip" style="padding: 0px;">
               <span id="userInfo"></span>
@@ -75,22 +73,29 @@
             <div id="userHubs">
               <div style="padding-top: 0px; text-align: center;">
                 <button class="btn btn-lg btn-default" id="autodeskSigninButton">
-                  <img
-                    src="https://github.com/Autodesk-Forge/learn.forge.viewhubmodels/raw/master/img/autodesk_text.png"
-                    height="15"> Sign in
+                  <img src="https://github.com/Autodesk-Forge/learn.forge.viewhubmodels/raw/master/img/autodesk_text.png"
+                    height="0"> Sign in
                 </button>
                 <a href="https://forge.autodesk.com/blog/bim-360-docs-provisioning-forge-apps">Learn more</a>.
               </div>
             </div>
           </div>
-        </div>
+        </ul>
+      </ul>
     </div>
-  </nav>
-  <!-- End of navbar -->
-  <div class="container-fluid fill">
-    <div class="row fill">
-      <div class="col-sm-8 fill">
+      <div class="col-sm-2" id="widgets">
+        <img src="https://www.air-rite.com/media/logo.png" alt="..." class="img-thumbnail">
+        <h6><h6>
+        <img src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/191:100/pass/GoogleMapTA.jpg" alt="..." class="img-thumbnail">
+        <h6>1323 Morse Ave. Chicago, IL 60626 </h6>
+        <img src="http://www.xconomy.com/wordpress/wp-content/images/2014/02/Spring-District-building-rendering.jpg" alt="..." class="img-thumbnail">
+        <h6>Coordination Schedule</h6>
+        <img src="https://apexcharts.com/wp-content/uploads/2018/05/semi-circle-chart.svg" alt="..." class="img-thumbnail">
+
+      </div>
+      <div class="col-sm-8" id="visuals">
         <div id="forgeViewer"></div>
+        <div id="dashboard"></div>
       </div>
 
       <div class="col-sm-4 fill">

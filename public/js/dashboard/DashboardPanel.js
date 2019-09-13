@@ -59,6 +59,11 @@ class ModelData {
     getIds(propertyName, propertyValue) {
         return this._modelData[propertyName][propertyValue];
     }
+
+    getCountInstances(propertyName) {
+        return Object.keys(this._modelData[propertyName]).map(key => this._modelData[propertyName][key].length);
+    }
+
 }
 
 
