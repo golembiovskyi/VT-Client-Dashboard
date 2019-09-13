@@ -51,6 +51,11 @@ class ModelData {
         return Object.keys(this._modelData[propertyName]).map(key => this._modelData[propertyName][key].length);
     }
 
+    getCountStatus(propertyName, status) {
+        let keys = Object.keys(this._modelData[propertyName]).map(key => this._modelData[propertyName][key][status]);
+        return keys;
+    }
+
     getIds(propertyName, propertyValue) {
         return this._modelData[propertyName][propertyValue];
     }
@@ -60,4 +65,6 @@ class ModelData {
     }
 
 }
+
+
 

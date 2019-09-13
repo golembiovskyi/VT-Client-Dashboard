@@ -3,7 +3,8 @@
 <head>
   <title>BIM360 Dashboard</title>
   <meta charset="utf-8" />
-  <link rel="shortcut icon" href="https://github.com/Autodesk-Forge/learn.forge.viewhubmodels/raw/master/img/favicon.ico">
+  <link rel="shortcut icon"
+    href="https://github.com/Autodesk-Forge/learn.forge.viewhubmodels/raw/master/img/favicon.ico">
   <!-- Common packages: jQuery, Bootstrap, jsTree -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -11,7 +12,8 @@
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.7/themes/default/style.min.css" />
   <!-- Autodesk Forge Viewer files -->
-  <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css" type="text/css">
+  <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css"
+    type="text/css">
   <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"></script>
   <!-- this project files -->
   <link href="css/main.css" rel="stylesheet" />
@@ -19,24 +21,20 @@
   <script src="js/ForgeViewer.js"></script>
 
   <script src="/js/handleselectionextension.js"></script>
-  
+
   <script src="/js/dockingpanelextension.js"></script>
 
   <!-- dashboard files -->
   <script src="js/Dashboard/Dashboard.js"></script>
-
   <script src="js/Dashboard/DashboardPanel.js"></script>
 
   <!--Chart JS  packages-->
-  <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" ></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" />
 
   <script src="js/Dashboard/PanelCategoryChart.js"></script>
   <script src="js/Dashboard/PanelMaterialChart.js"></script>
-
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBV72JOytVAAXlvey3kGB-XCu4S5XUxOs" type="text/javascript"></script>
-  <script src="js/MiniMapExtension.js"></script>
-
+  <script src="js/Dashboard/PanelClashStatusChart.js"></script>
 </head>
 
 <body>
@@ -45,7 +43,8 @@
   <div class="container-fluid">
       <li>
           <a href="https://www.viatechnik.com/" target="_blank">
-            <img alt="VIATechnik" src="https://www.viatechnik.com/wp-content/themes/viatechnik/assets/images/logo.png" height="15">
+            <img alt="VIATechnik" src="https://www.viatechnik.com/wp-content/themes/viatechnik/assets/images/logo.png"
+              height="15">
           </a>
         </li>
   </div>
@@ -66,8 +65,10 @@
           <div class="panel panel-default fill">
             <div class="panel-heading" data-toggle="tooltip" style="padding: 0px;">
               <span id="userInfo"></span>
-              <span id="refreshHubs" class="glyphicon glyphicon-refresh" style="cursor: pointer; display: none" title="Refresh list of files"></span>
-              <span id="signOut" class="glyphicon glyphicon-log-out" style="margin-top:5px;cursor: pointer; float: right; display: none" title="Sign out"> </span>
+              <span id="refreshHubs" class="glyphicon glyphicon-refresh" style="cursor: pointer; display: none"
+                title="Refresh list of files"></span>
+              <span id="signOut" class="glyphicon glyphicon-log-out"
+                style="margin-top:5px;cursor: pointer; float: right; display: none" title="Sign out"> </span>
             </div>
             <div id="userHubs">
               <div style="padding-top: 0px; text-align: center;">
@@ -96,8 +97,13 @@
         <div id="forgeViewer"></div>
         <div id="dashboard"></div>
       </div>
+
+      <div class="col-sm-4 fill">
+        <!--<script src="js/d3Charts/d3Charts.js"></script>-->
+      </div>
     </div>
   </div>
 </body>
 <iframe id="hiddenFrame" style="visibility: hidden; display:none" />
+
 </html>
