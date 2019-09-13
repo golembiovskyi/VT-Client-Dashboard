@@ -50,7 +50,7 @@ class DashboardPanel {
     load(parentDivId, divId, viewer) {
         this.divId = divId;
         this.viewer = viewer;
-        $('#' + parentDivId).append('<div class="short-div" id="' + divId + '" class="dashboardPanel"></div>');
+        $('#' + parentDivId).append('<div id="' + divId + '" class="dashboardPanel"></div>');
     }
 }
 
