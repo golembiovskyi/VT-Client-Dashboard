@@ -8,7 +8,7 @@ class ClashStatus extends DashboardPanelChart {
     drawChart = async () => {
         let items = null;
         await getClashStatusData(function (output) {
-            items = output;
+            items = output.sort(function(a, b){return a.Date-b.Date});
         });
 
         const _this = this; // need this for the onClick event
@@ -17,19 +17,16 @@ class ClashStatus extends DashboardPanelChart {
         new Chart(ctx, {
             type: 'bar',
             data: {
-                //labels: this.modelData.getLabels(this.propertyToUse).map((item, index) => `Clash Test ${index + 1}`),
-                labels: items.map((item, index) => `Clash Test ${index + 1}`),
+                labels: items.map((item) => item.Date),
                 datasets: [{
                     label: 'Open',
-                    //data: this.modelData.getCountStatus(this.propertyToUse, 'Open'),
-                    data: items.map(item => item['Open']),
+                    data: items.map(item => item['OpenClashes']),
                     backgroundColor: '#EBCCD1',
                     borderWidth: 1
                 },
                 {
                     label: 'Closed',
-                    //data: this.modelData.getCountStatus(this.propertyToUse, 'Closed'),
-                    data: items.map(item => item['Closed']),
+                    data: items.map(item => item['ClosedClashes']),
                     backgroundColor: '#D6E9C6',
                     borderWidth: 1
                 }]
@@ -37,7 +34,7 @@ class ClashStatus extends DashboardPanelChart {
             options: {
                 title: {
                     display: true,
-                    text: 'Clash History'
+                    text:['CLASH HISTORY', `${items[items.length - 1].AvgClearClashDays} DAYS`, 'AVG TIME TO CLEAR CLASH']
                 },
                 scales: {
                     xAxes: [{ stacked: true }],

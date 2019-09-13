@@ -1,68 +1,67 @@
-html, body{
-    min-height: 100%;
-    height: 100%;
-  }
-  
-  .fill{
-    height: calc(100vh - 100px);
-  }
-  
-  body {
-    padding-left: 5px; /* space for the side nav bar */
-    margin-left: 0px;
-    width: 100%;
-    height: 100%;
-  }
-  
-  #userHubs {
-    overflow: scroll;
-    width: 240px;
-    height: calc(120vh - 240px);
-  }
-  
-  #forgeViewer {
-    width: 500px;
-  }
-  
-  .handleSelectionExtensionIcon {
-    background-image: url(https://github.com/encharm/Font-Awesome-SVG-PNG/raw/master/white/png/24/object-group.png);
-    background-size: 24px;
-    background-repeat: no-repeat;
-    background-position: center;
+html, body {
+  min-height: 100%;
+  height: 100%;
+}
+
+.fill {
+  height: calc(100vh - 100px);
+}
+
+body {
+  padding-left: 5px;
+  /* space for the side nav bar */
+  margin-left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+#userHubs {
+  overflow: scroll;
+  height: calc(120vh - 240px);
+}
+
+#forgeViewer {
+  height: 800px;
+}
+
+.handleSelectionExtensionIcon {
+  background-image: url(https://github.com/encharm/Font-Awesome-SVG-PNG/raw/master/white/png/24/object-group.png);
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .modelSummaryExtensionIcon {
-    background-image: url(https://github.com/encharm/Font-Awesome-SVG-PNG/raw/master/white/png/24/dashboard.png);
-    background-size: 24px;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  
-  #dashboard{
-    overflow: auto;
-    height: calc(100vh - 100px);
-    display: block;
-  }
-  
-  .transition-width {
-    transition: width 1s ease-in-out;
-  }
-  
-  .dashboardPanel {
-    width: 100%;
-    padding: 3%;
-    display: block;
-  }
-  
+  background-image: url(https://github.com/encharm/Font-Awesome-SVG-PNG/raw/master/white/png/24/dashboard.png);
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-  .miniMapExtension {
-    background-image: url(https://github.com/encharm/Font-Awesome-SVG-PNG/raw/master/white/png/24/map-o.png);
-    background-size: 24px;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  
-  #googlemap {
-    width: 100%;
-    height: calc(100% - 70px);
-  }
+#dashboard {
+  overflow: auto;
+  height: calc(100vh - 100px);
+  display: block;
+}
+
+.transition-width {
+  transition: width 1s ease-in-out;
+}
+
+.dashboardPanel {
+  width: 100%;
+  padding: 3%;
+  display: block;
+}
+
+.miniMapExtension {
+  background-image: url(https://github.com/encharm/Font-Awesome-SVG-PNG/raw/master/white/png/24/map-o.png);
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#googlemap {
+  width: 100%;
+  height: calc(100% - 70px);
+}
